@@ -3,7 +3,7 @@ const alunos = ['Winicios', 'Gabrieli', 'Douglas', 'Gean'];
 const nota = alunos.map(function(nomeDoAlunos) {
     nomeDoAlunos = {
         nome: nomeDoAlunos,
-        nota: 60
+        nota: 6
     }
 
     return nomeDoAlunos;
@@ -29,17 +29,17 @@ nota.push ({
     nome: 'Ricardo'
 })
 
-alteraNota('Winicios', 90);
-alteraNota('Douglas', 50);
+alteraNota('Winicios', 9);
+alteraNota('Douglas', 5);
 
 semNota();
 
 const alunosAprovados = nota.filter(function(aluno) {
-    return aluno.nota >= 60;
+    return aluno.nota >= 6;
 });
 
 const alunosReprovados = nota.filter(function(aluno) {
-    return aluno.nota <= 59;
+    return aluno.nota <= 5;
 });
 
 const contarTodos = function() {
@@ -51,7 +51,7 @@ const totalAlunos = contarTodos();
 const ContarAprovados = function() {
     let numeroAprovados = 0;
     nota.forEach(function(aluno) {
-        if (aluno.nota >= 60) {
+        if (aluno.nota >= 6) {
             numeroAprovados++;
         }
     });
@@ -63,7 +63,7 @@ const totalAprovados = ContarAprovados();
 const ContarReprovados = function() {
     let numeroReprovados = 0;
     nota.forEach(function(aluno) {
-        if (aluno.nota <= 59) {
+        if (aluno.nota <= 5) {
             numeroReprovados++;
         }
     });
